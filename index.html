@@ -10,26 +10,27 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #411A47;
+      color: white;
     }
     .container {
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      background: #fff;
+      background: #411A47;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     h1 {
-      color: #333;
+      color: #FFFFFF;
       text-align: center;
     }
     p {
-      color: #555;
+      color: #FFFFFF;
       text-align: center;
     }
     .form-tool {
-      background: #f1f1f1;
+      background: #5A2B66;
       padding: 20px;
       border-radius: 8px;
       margin: 20px 0;
@@ -46,25 +47,27 @@
       margin-bottom: 15px;
       border: 1px solid #ddd;
       border-radius: 4px;
+      background-color: #f9f9f9;
+      color: #411A47;
     }
     button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #007BFF;
+      background-color: #411A47;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
     button:hover {
-      background-color: #0056b3;
+      background-color: #5A2B66;
     }
     .cta {
       text-align: center;
       margin-top: 30px;
     }
     .cta h3 {
-      color: #180E3C;
+      color: #FFFFFF;
       margin-bottom: 10px;
     }
     .cta a {
@@ -82,7 +85,7 @@
     .result {
       margin-top: 20px;
       font-size: 16px;
-      color: #444;
+      color: #FFFFFF;
     }
   </style>
 </head>
@@ -125,15 +128,23 @@
         return;
       }
 
+      const suggestions = `
+        <h4>Ideas para mejorar tu publicación:</h4>
+        <ul>
+          <li><strong>Innovación:</strong> Agrega un giro inesperado o una reflexión que conecte con la nostalgia pero también hable del presente.</li>
+          <li><strong>Detalles adicionales:</strong> Incluye sensaciones como olores, sonidos o imágenes que hagan el recuerdo más vívido.</li>
+          <li><strong>Desafío:</strong> Propón una acción diferente, como pedirle a tu audiencia que compartan una foto relacionada o que creen una historia alternativa.</li>
+        </ul>`;
+
       document.getElementById('result').innerHTML = `
         <h3>Tu publicación nostálgica optimizada:</h3>
         <p><strong>Recuerdo:</strong> ${memory}</p>
         <p><strong>Emoción:</strong> ${emotion}</p>
         <p><strong>Publicación:</strong> "${memory} fue una época increíble llena de ${emotion}. ${action}"</p>
         <p>¡Ahora estás listo para publicar algo que conectará profundamente con tu audiencia!</p>
+        ${suggestions}
       `;
     }
   </script>
 </body>
 </html>
-
